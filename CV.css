@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(184, 218, 219);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: solid;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 5rem;
+    padding: 2rem;
+    justify-content: center;
+    max-width: 80%;
+    border-bottom: solid;
+}
+
+.container img {
+    margin-left: 8rem;
+    border-radius: 4%;
+}
+
+.container p {
+    font-size: 1.5rem;
+    margin: 1.5rem; 
+}
+
+#merits {    
+    padding: 2rem;
+    max-width: 80%;
+    display: grid;
+    grid-template:
+    "A B" 1fr
+    "C D" 1fr / 1fr 1fr;
+    border-bottom: solid;   
+}
+
+#merits-list {
+    grid-area: A;
+}
+
+#achievements {
+    grid-area: B;
+}
+
+#contact {
+    padding: 2rem;
+}
+
+#contact h2 {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }   
+
+    .container img {
+        margin-left: 7rem;
+        border-radius: 4%;
+    }
+
+    #merits {
+        display: flex;
+        flex-direction: column;
+    }
+}
